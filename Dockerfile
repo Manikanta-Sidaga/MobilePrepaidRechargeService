@@ -1,4 +1,4 @@
-FROM maven:3.8.7-eclipse-temurin-21 AS build
+FROM eclipse-temurin:21-jdk AS build
 RUN mvn clean package -DskipTests
 
 FROM  openjdk:21-jdk-slim
